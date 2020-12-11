@@ -1,0 +1,70 @@
+$first-section-background: black;
+$second-section-background: rgb(44, 44, 44);
+$third-section-background: rgb(59, 59, 59);
+
+%section {
+    height: 100vh;
+}
+
+.firstSection {
+    @extend %section;
+    height: 95vh;
+    background-color: $first-section-background;
+    
+    padding: 4rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    flex: 1;
+    flex-shrink: 1;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    position: relative;
+    max-height: 30vh;
+    display: flex;
+
+    padding-bottom: 1rem;
+
+    > img {
+        margin: 0 auto;
+        width: auto;
+        height: 100%;
+    }
+}
+
+.elektroniczni {
+    height: auto;
+    max-width: 80vw;
+    padding: 2rem 0;
+
+    > img {
+        width: 100%;
+    }
+}
+
+// .firstSecondSectionGradient {
+//     height: 250px;
+//     background: rgb(0,0,0);
+//     background: linear-gradient(180deg, $first-section-background 0%, $first-section-background 0%, $second-section-background 100%);
+// }
+
+.secondSection {
+    @extend %section;
+    background-color: $second-section-background;
+}
+
+.thirdSection {
+    @extend %section;
+    background-color: $third-section-background;
+
+}
