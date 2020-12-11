@@ -10,18 +10,26 @@ $third-section-background: rgb(59, 59, 59);
     @extend %section;
     height: 95vh;
     background-color: $first-section-background;
-    
+
     padding: 4rem;
 
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
+
+    position: relative;
+
+    :global(.particles-js-canvas-el) {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .logoContainer {
+    width: 100%;
     flex: 1;
-    flex-shrink: 1;
+    max-height: 50vh;
 
     display: flex;
     align-items: center;
@@ -29,26 +37,37 @@ $third-section-background: rgb(59, 59, 59);
 }
 
 .logo {
-    position: relative;
-    max-height: 30vh;
-    display: flex;
+    flex: 1;
+    min-height: 0;
 
+    position: relative;
     padding-bottom: 1rem;
+    max-height: 100%;
+
+    display: flex;
+    justify-content: center;
 
     > img {
-        margin: 0 auto;
-        width: auto;
-        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
     }
 }
 
 .elektroniczni {
-    height: auto;
-    max-width: 80vw;
+    flex: 1;
+    min-height: 0;
+
     padding: 2rem 0;
+    max-height: 100%;
+
+    display: flex;
+    justify-content: center;
 
     > img {
-        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
     }
 }
 
