@@ -31,7 +31,6 @@ const _FirstSection = () => {
                 {/*    <img src="/images/logo.png" />*/}
                 {/*</div>*/}
                 <div className={styles.elektroniczni}>
-                    <img src="/images/elektroniczni.png" />
                 </div>
             </div>
             <Countdown/>
