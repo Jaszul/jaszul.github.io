@@ -5,20 +5,26 @@ import config from '../../configuration';
 
 export const Countdown = () => {
     const [count, setCount] = useState(moment.duration(moment()));
-  
+
     // Use useRef for mutable variables that we want to persist
     // without triggering a re-render on their change
     const requestRef = useRef();
-    
-    const animate = () => {
-            const now = moment();
-            const timeDiff = moment(config.kontrola_lotu_date) - now;
-            const dur = moment.duration(timeDiff);
-            setCount(dur);
 
-      requestRef.current = requestAnimationFrame(animate);
+    const animate = () => {
+        const now = moment();
+
+        let dur;
+
+        if (moment(config.kontrola_lotu_date).isAfter(moment())) {
+            const timeDiff = moment(config.kontrola_lotu_date) - now;
+            dur = moment.duration(timeDiff);
+            requestRef.current = requestAnimationFrame(animate);
+        } else {
+            dur = moment.duration(0);
+        }
+
+        setCount(dur);
     }
-    
 
     let days = '';
     let hours = '';
@@ -33,10 +39,10 @@ export const Countdown = () => {
     }
 
     useEffect(() => {
-      requestRef.current = requestAnimationFrame(animate);
-      return () => cancelAnimationFrame(requestRef.current);
+        requestRef.current = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(requestRef.current);
     }, []); // Make sure the effect runs only once
-    
+
     return (
         <div className={styles.countdown}>
             <h3>Do następnej Kontroli Lotu</h3>
