@@ -7,6 +7,10 @@ $third-section-background: #0d0d0d;
 %section {
     height: 100vh;
     padding: 4rem;
+
+    @media only screen and (max-width: 992px) {
+        padding: 1rem;
+    }
 }
 
 .firstSection {
@@ -20,6 +24,10 @@ $third-section-background: #0d0d0d;
     flex-direction: column;
 
     position: relative;
+
+    @media only screen and (max-width: 992px) {
+        padding: 4rem 2rem;
+    }
 }
 
 .particlesContainer {
@@ -89,6 +97,7 @@ $third-section-background: #0d0d0d;
 
 .secondSection {
     @extend %section;
+    height: auto;
     background-color: $second-section-background;
 
     position: relative;
@@ -119,14 +128,18 @@ $third-section-background: #0d0d0d;
     z-index: 0;
     width: 100%;
     height: 100%;
-    background: url(../../public/images/people.png) no-repeat center;
+    background-image: url(../../public/images/people.png);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
 }
 
 .secondSection__content {
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .secondSection__text {
@@ -135,6 +148,11 @@ $third-section-background: #0d0d0d;
     z-index: 1;
 
     font-size: 1.2rem;
+
+    @media only screen and (max-width: 992px) {
+        font-size: 1rem;
+    }
+
     line-height: 1.8;
     font-weight: 100;
     font-family: 'Lato', sans-serif;
@@ -174,11 +192,18 @@ $third-section-background: #0d0d0d;
 
     z-index: 1;
     flex: 1;
+    flex-basis: auto;
     max-width: 600px;
+    min-height: 400px;
 }
 
 .thirdSection__socials {
-    font-size: 6rem;
+    font-size: 4rem;
+
+    @media only screen and (max-width: 992px) {
+        font-size: 2.5rem;
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
