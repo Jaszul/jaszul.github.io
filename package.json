@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "yarn run build && yarn run export",
-    "deploy": "gh-pages -b gh-pages -d out",
+    "deploy": "gh-pages -b gh-pages -d out --dotfiles",
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
