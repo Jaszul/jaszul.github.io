@@ -1,13 +1,10 @@
 import { useLayoutEffect } from 'react';
 import configuration from '../../configuration';
 import { AwaitHydration } from '../AwaitHydration';
-import styles from './sections.module.scss';
 
-import { findIconDefinition, icon } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const glasses = findIconDefinition({ prefix: 'fas', iconName: 'glasses' })
 
-const i = icon(glasses)
+import styles from './sections.module.scss';
 
 export const _ThirdSection = () => {
     useLayoutEffect(() => {
