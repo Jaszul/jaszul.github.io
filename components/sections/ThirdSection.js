@@ -34,7 +34,7 @@ export const _ThirdSection = () => {
                 <a href="https://soundcloud.com/elektroniczni" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={["fab", "soundcloud"]} />
                 </a>
-                <a href="https://www.youtube.com/channel/UC79Naddxp3YQWzX4AGVt6yQ" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UCXm-lMm_J9iD4gc3eRzubFw" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={["fab", "youtube"]} />
                 </a>
                 <a href="https://www.twitch.tv/elektroniczni" target="_blank" rel="noopener noreferrer">
