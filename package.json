@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "predeploy": "yarn run build && yarn run export",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -b gh-pages -d dist --dotfiles"
   },
   "dependencies": {
